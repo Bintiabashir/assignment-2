@@ -7,8 +7,8 @@ common styles
 -------------- */
 body {
     font-family: 'Poppins', sans-serif;
-    width: 1600px;
-    height: 2165px;
+    width: 1508px;
+    max-width: 100%;
     margin: auto;
     border: 0.1px solid lightgrey;
 
@@ -16,7 +16,7 @@ body {
 
 main {
     width: 1321px;
-    height: 1670px;
+    max-width: 90%;
     margin: auto;
 }
 
@@ -29,17 +29,17 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     background-color: #161616;
     border-radius: 30px;
     margin-top: 50px;
-    height: 646px;
 }
 
 .title {
     Width: 531px;
     color: #FFFFFF;
     line-height: 80px;
-    Font-size: 70px;
+    Font-size: 4em;
     margin: 0;
 }
 
@@ -60,7 +60,7 @@ main {
 }
 
 .button span {
-    font-size: 20px;
+    font-size: 1.5em;
 }
 
 .fa-greater-than {
@@ -70,7 +70,6 @@ main {
 
 .banner-image img {
     Width: 581px;
-    Height: 613px;
 }
 
 /*-------------------------
@@ -114,7 +113,7 @@ main {
 .menu a {
     text-decoration: none;
     color: #161616;
-    font-size: 20px;
+    font-size: 1.25em;
 
 }
 
@@ -154,13 +153,13 @@ main {
 }
 
 .blog-button span {
-    font-size: 16px;
+    font-size: 1.25em;
 
 }
 
 .blog-title {
     color: #161616;
-    font-size: 18px;
+    font-size: 1.15em;
     font-weight: 600;
     margin: 15px 20px 20px;
 
@@ -189,17 +188,42 @@ main {
     padding-left: 10px;
 }
 
+/*-------- view button styles------------ */
+.view-button {
+    display: none;
+    margin-bottom: 70px;
+}
+
+.view {
+    height: 47px;
+    width: 131px;
+    border-radius: 5px;
+    background-color: #DD0000;
+    border: 0;
+
+}
+
+.view span {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+
 /*--------------------
      footer styles
  --------------------- */
 .footer {
-    height: 445px;
+    max-width: 100%;
     background-color: #161616;
 }
 
 .footer-title {
     color: #FFFFFF;
-    font-size: 40px;
+    font-size: 2.5em;
     text-align: center;
     padding-top: 130px;
     padding-bottom: 42px;
@@ -210,15 +234,129 @@ main {
     background: #FFFFFF1A;
     border: 1px solid #FFFFFF1A;
     width: 1320px;
+    max-width: 90%;
 }
 
 .label {
     color: #B9B9B9;
     padding-top: 36px;
-    text-align: center;
+    padding-bottom: 130px;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 50px;
+    justify-content: center;
 }
 
 .label small {
-    font-size: 16px;
-    margin-left: 52px;
+    font-size: 1em;
+    margin: 0 35px;
+}
+
+/*---------------
+    Media Queries
+ ---------------- */
+
+/*----------- tablet devices ------------ */
+@media only screen and (min-width:689px) and (max-width:992px) {
+
+    body,
+    main,
+    footer {
+        height: auto;
+    }
+
+    .container {
+        align-items: flex-end;
+    }
+
+    .banner-info {
+        width: 45%;
+        padding-left: 50px;
+    }
+
+    .title {
+        Width: auto;
+        color: #FFFFFF;
+        line-height: 50px;
+        Font-size: 3em;
+        margin-bottom: 0;
+        margin-top: 50px;
+    }
+
+    .sub-title {
+        width: auto;
+        line-height: 20px;
+        font-size: 14px;
+    }
+
+    .button {
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+    .banner-image {
+        width: 45%;
+    }
+
+    .banner-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .blog-section {
+        flex-direction: column;
+        margin: 54px 0 50px;
+    }
+
+    .menu-bar {
+        background-color: #FFFFFF;
+        height: auto;
+        width: auto;
+        display: block;
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+
+    .menus {
+        height: auto;
+        width: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+    }
+
+    .blog {
+        height: auto;
+        width: auto;
+    }
+
+    .menu {
+        border: 1px solid #E8E8E8;
+    }
+
+    .blogs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .thumbnails img {
+        width: 100%;
+    }
+
+    .blog-title {
+        font-size: 1.25em;
+    }
+
+    .view-button {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-title {
+        padding-top: 70px;
+    }
+
+    .label {
+        padding-bottom: 55px;
+    }
+
 }
